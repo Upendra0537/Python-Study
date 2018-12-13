@@ -1,0 +1,839 @@
+#Python is Interpreted - not compiled
+#case sensitive - lowercase
+#\ can be used for line continuation
+#no brackets on indentation
+#a = b = c = 1
+#a,b,c = 1,2,3
+#del - to delete a variable or object
+# + string concatenation
+# str*3 - repetition
+#str[2:5] - prints from 3rd, 4th and 5th char
+#break - to break the loop, continue - to stop the current loop and retest
+#pass - just to have syntactical present doesn't execute
+#list[-2] - second element from the right
+#print('\n') - new line
+#"""  adgadg
+# asdfasdfd """ - triple quotes for bring strings without line continuation
+
+#print('Hello World')
+#name = input('name plz? ')
+#print(name)
+#print('Hi ' , name + ' Kanuru')
+#print('name ', name)
+
+#import math as fun
+#print('pie value ' , fun.pi)
+#del(fun)
+
+#from math import tan, pi 
+#print('pie value ' , pi)
+
+#from math import *
+#print(dir())
+
+#from math import pi
+#radius = input('enter radius')
+#print('the area is ' , float(radius)** 2 * pi)
+#print('circumference is ', 2 * pi * float(radius))
+
+
+#x,y = 2, 3
+#print('x+y= ' , end = ' ')
+#x *= y
+#print(x)
+
+
+#x = 5.0
+#print(x)
+#type(x)
+#print(int(x))
+#type(x)
+
+
+#x=1
+#print(bool(x))
+
+#x = 'hello "world"'
+#y = 'hello \'hello\''
+#print(x,end = '\n ')
+#print(y)
+
+#print('_' * 4)
+
+
+#csv = 'a,b,c'
+#print('data ',csv.split(','))
+
+#data = list('hello')
+#print(data)
+
+# list - can be added more elements - mutable
+#list = [ 1,2,'a','b']
+#print(list)
+
+#print( 'a' in list)
+#print('b' not in list)
+#listdata = list.append(5)
+#print(listdata)
+#print(list)
+#listdata2 = list.append((6,7))
+#print(listdata2) # doesn't make any sense None
+#print(list)
+#listdata3 = list.pop()
+#print(listdata3)
+#print(list)
+#list.insert(6,10) #Doesnt replace but only inserts at the specified location
+#print(list)
+
+#tuple - can not add more elements than defined  - immutable - read-only form of List
+#tuple_str = (5,6,2)
+#print(tuple_str)
+
+#slicing
+#print(list)
+#print(list[1:3]) # give from first position till 3rd position
+#print(list[:])
+#print(list[::2])
+#print(list[1:4:2])
+#print(list[-1])
+#print(list)
+#list[0] = 'one'
+#print(list)
+#a_slice = slice(4) # split to give 4 elements
+#print(a_slice) #doesnt make any sense  slice(None, 4, None)
+#print(list[a_slice])
+
+
+#a_range = range(5)
+#print(list(a_range))
+#for i in a_range:
+#    print(i)
+#print(list(range(10,-1,-1)))
+
+#listdata = ['a','b','c','d','a']
+#print(set(listdata))
+
+#listdata_ref = listdata # reference
+#listdata_copy = listdata.copy() # creates a copy 
+
+#dict_sync={'k1':'v1','k2':'v2'}
+#print(dict_sync)
+#dict_data = dict(ka='v1',k2='v2')
+#print(dict_data)
+#print(dict_data['k2'])
+#dict_data['k3'] = 'v3'
+#print(dict_data)
+#dict_keys = dict_data.keys()
+#dict_values = dict_data.values()
+#map = zip(dict_keys,dict_values)
+#print(dict(map))
+
+#while 1:#    print('execute once')
+#    if not 0:
+#        break
+
+#for char in 'sting':
+#    print(char, end=' ')
+
+#n=input('enter a number')
+
+#if type(n) == 'int':
+#    if n > 2:
+#        print('n greater than 2')
+#    elif n == 2:
+#        print('n is equal to 2')
+#else:
+#    print('n value', n)
+
+
+#for char in 'Welcome':
+#    print (char, end='*')
+#print()
+
+#print(dict())
+
+#def square(a):
+#    return(a*a)
+
+#x=[1,2,3]
+#s = iter(x)
+#print(next(s))
+
+#list comprehensions
+#y=[i*2 for i in x]
+#print(y)
+
+#generator
+#g=(i*2 for i in x)
+#print(next(g))
+
+# get some clarity
+
+#def showme(name, *vartuple, **vardict):
+#    '''shows details'''
+#    print("name: ", name)
+#    for arg in vartuple:
+#        print('variable non_kwd arg: ', arg)
+#    for key in vardict:
+#        print('variable kwd arg: ', vardict[key])
+
+#showme("upendra")
+#showme("upendra" , 35 , 'm')
+#showme("upendra", age = 25, city='san')
+
+'''
+zenPython = " The Zen of Python, by Tim Peters Beautiful is better than ugly ,is by the the than better ! ."
+word = zenPython.split(' ')
+print(word)
+words = [data for data in word if data != '!' or ' ' or '.']
+print(words)
+lower_word = [lword.lower() for lword in words]
+print(lower_word)
+set_word = set(words)
+print(set_word)
+
+keys = list()
+values = list()
+for uniq_word in lower_word:
+    keys.append(uniq_word)
+    values.append(zenPython.count(uniq_word))
+else :
+    print('all strings validate')
+    print(keys)
+    print(values)
+
+dict_word = zip(keys,values)
+dict_data = dict(dict_word)
+print(dict_data)
+
+
+gret_word = [grt_word for grt_word in dict_data.keys() if dict_data[grt_word] > 1]
+print(gret_word)
+'''
+
+'''
+#fibonacci series
+
+
+
+def fib_gen(integer):
+    # Give the fibonacci series of the integer values 
+    fs_temp = [0,1]
+    for i in range(1,integer):
+        fs_data = int(fs_temp[i] + fs_temp[i-1])
+        fs_temp.append(fs_data)
+    else:
+        return fs_temp
+
+integer = int(input("Enter the integer"))
+print(fib_gen(integer))
+
+'''
+
+
+#for grt_word in dict_data.keys():
+#    if dict_data[grt_word] > 2:
+#        print('found')
+#    else:
+#        print('not found')
+
+'''
+#class 
+class person:
+    'this is a person class'
+    def __init__(self,fname,lname):
+        self.fname = fname
+        self.lname = lname
+
+p1 = person('upendra', 'kanuru')
+
+print(p1.fname,'+', p1.lname)
+print(getattr(p1,'fname'))
+print(setattr(p1, 'fname', 'siri'))
+print(getattr(p1,'fname'))
+print(delattr(p1, 'fname'))
+print(hasattr(p1,'fname'))
+print(person.__doc__)
+'''
+
+'''
+#operator overloading
+class Vector:
+   def __init__(self, a, b):
+      self.a = a
+      self.b = b
+
+   def __str__(self):
+      return 'Vector (%d, %d)' % (self.a, self.b)
+   
+   def __add__(self,other):
+      return Vector(self.a + other.a, self.b + other.b)
+
+v1 = Vector(2,10)
+v2 = Vector(5,-2)
+print(v1 + v2)
+'''
+
+'''
+#Data hiding - strong Private variable accessing
+class JustCounter:
+   __secretCount = 0
+  
+   def count(self):
+      self.__secretCount += 1
+      print(self.__secretCount)
+
+counter = JustCounter()
+counter.count()
+counter.count()
+print(counter.__secretCount)
+print(counter._JustCounter__secretCount)
+'''
+
+'''
+# inheritance
+class Person: 
+    def __init__(self, fname, lname):
+        self.fname = fname
+        self.lname = lname
+        
+
+#class Employee(Person):
+#    all_employees = []
+#    def __init__(self, fname, lname, empid):
+#        Person.__init__(self, fname, lname)
+#        self.empid = empid
+#        Employee.all_employees.append(self)
+
+#p1 = Person('George', 'smith')
+#print(p1.fname, '-', p1.lname)
+#e1 = Employee('Jack', 'simmons', 456342)
+#e2 = Employee('John', 'williams', 123656)
+#print(e1.fname, '-', e1.empid)
+#print(e2.fname, '-', e2.empid)
+
+#class EmployeesList(list):
+#    def search(self, name):
+#        match_emp = []
+#        for employee in self:
+#            if name in employee.fname:
+#                match_emp.append(employee.fname)
+#        return match_emp
+
+class Employee(Person):
+#    all_employees = EmployeesList()
+    all_employees = []
+    def __init__(self, fname, lname, empid):
+        Person.__init__(self, fname, lname)
+#        self.empid = empid
+        self.__empid = empid #Encapsulation
+        Employee.all_employees.append(self)
+
+    def getSalary(self):
+        return 'getsalary from Employer'
+
+    def getBonus(self):
+        return 'getbounus from Employer'
+
+    def getEmpid(self):
+        return self.__empid
+
+#ploymorphism
+class ContractEmployee(Employee):
+    def getSalary(self):
+        return 'you will not get salary from Employer'
+    def getBonus(self):
+        return 'you will not get bonus from Employer'
+
+e1 = Employee('Jack', 'simmons', 123456)
+e2 = Employee('upendra', 'kanuru', 78945)
+
+e3 = ContractEmployee('Jack1', 'simmons1', 1234561)
+e4 = ContractEmployee('upendra1', 'kanuru1', 789451)
+
+print(e1.fname + ' ' +  e1.getBonus())
+print(e3.getBonus())
+#print(e1.empid) - fails as __empid is private and cannot be access
+print(e1.getEmpid())
+'''
+
+'''
+#exception handling
+try:
+    a = pow(2, 4)
+    print("Value of 'a' :", a)
+    b = pow(2, 'hello')   # results in exception
+    print("Value of 'b' :", b)
+
+except TypeError as e:
+    print(e)
+    print('oops!!!')
+print('Out of try ... except.')
+
+
+try:
+#    a,b = 2,'hello'
+    a,b = 2,3
+    if not(isinstance(a,int) and isinstance(b,int)):
+        raise TypeError('two inputs must be integers')
+    c = a**b
+except TypeError as e:
+    print(e)
+else:
+    print(c)
+finally:
+    print('final clause')
+'''
+
+'''
+#file handling
+filename = "SampleFile1.txt"
+try:
+#    
+     fh = open(filename,'w')
+#    print(fh.readlines()) # full file as list
+#    print(fh.readline()) # each line
+#    print(fh.read()) # full file
+#    for line in fh:
+#        print(line)
+#    line = "adding data"
+     fh.write("adding data")
+     fh.close()
+     fh = open(filename,"r")
+     print(fh.read())
+     fh = open(filename,"a")
+     fh.write("appended data")
+     fh.close()
+     fh = open(filename,"r")
+     print(fh.read())
+     
+     
+except:
+    print('unable to open the file')
+'''
+
+'''
+#random module
+import random as rand
+#n = [rand.random() for i in range(5)] # random numbers between 0 and 1
+n = [rand.randint(1,100) for i in range(5)] # random number
+print(n)
+
+
+import random as rand
+
+sides = ['head','tails']
+count = dict.fromkeys(sides,0)
+
+for i in range(10000):
+    side = rand.choice(sides)
+    count[side] += 1
+
+print(count)
+'''
+
+'''
+#time module
+import time
+
+print(time.time())#1538928374.471862
+print(time.ctime()) # Sun Oct  7 11:06:14 2018
+time.sleep(10)
+print(time.localtime())#time.struct_time(tm_year=2018, tm_mon=10, tm_mday=7, tm_hour=11, tm_min=6, tm_sec=14, tm_wday=6, tm_yday=280, tm_isdst=1)
+'''
+'''
+
+import re
+
+patterns = ['this','that']
+text = 'does this text match the patter'
+regcmp = [re.compile(p) for p in patterns]
+
+for pattern in patterns:
+    print('searching for "{}" in "{}"' .format(pattern,text))
+    if regcmp.search(text)
+#    match = re.search(pattern,text)
+#    if match:
+#        s = match.start()
+#        e = match.end()
+#        st = match.re.pattern
+        print('match found')
+#        print('found "{}" pattern, in "{}" from {} to {}' .format(st,text,s,e))
+    else:
+        print('no match found')
+        
+'''
+'''
+#XML Parsing
+from xml import etree
+tree = etree.parse('SampleXML.xml.txt')
+print(tree)
+'''
+
+'''
+#Higher order function
+#function as data
+def greet():
+    return 'Hello Everyone!'
+print(greet())
+
+wish = greet
+print(type(wish))
+print(wish())
+
+#function as argument
+
+def add(x, y):
+    return x+y
+
+def do(func, x, y):
+    return func(x, y)
+
+print(do(add, 12, 4))
+
+# return function
+
+def outer():
+    def inner():
+        s = ' Inner hello World'
+        return s
+    print('outer function')
+    return inner
+print(outer())
+func = outer()
+print(type(func))
+print(func())
+
+#closure
+
+def multiple_of(x):
+    def multiple(y):
+        return x*y
+    return multiple
+
+c1=multiple_of(5) #closure
+print(c1(4))
+
+'''
+'''
+my_list = [1, 5, 6, 9]
+new_list = list(map(lambda x: x*2, my_list)) # lambda function
+print(new_list)
+'''
+
+'''
+# Decorator
+def outer(func):
+    def inner():
+        print("accessing", func.__name__)
+        return func()
+    return inner
+
+@outer #greet = outer(greet)
+
+def greet():
+    return print('Hello!')
+
+#wish = outer(greet)
+#greet = outer(greet) #decorating 'greet'
+greet()
+#wish()
+
+'''
+
+'''
+#Descriptors
+class EmpNameDescriptor:
+    def __get__(self, obj, owner):
+        return self.__empname
+    def __set__(self, obj, value):
+#        if hasattr(obj, 'empname'):
+#            raise ValueError("'empname' is read only attribute")
+        if not isinstance(value,str):
+                raise TypeError("'empname' must be string")
+        self.__empname = value
+
+class EmpIdDescriptor:
+
+    def __get__(self, obj, owner):
+        return self.__empid
+
+    def __set__(self, obj, value):
+        if hasattr(obj, 'empid'):
+            raise ValueError("'Empid' is read only attribute")
+        if not isinstance(value, int):
+            raise TypeError("'empid' must be an integer")
+        self.__empid = value
+        
+class Employee:
+    empid = EmpIdDescriptor()
+    empname = EmpNameDescriptor()
+
+    def __init__(self,emp_id,emp_name):
+        self.empid = emp_id
+        self.empname = emp_name
+
+e1 = Employee(123456, 'upendra')
+print("{} is the empid of {}" .format(e1.empid, e1.empname))
+e1.empname = 'kanuru'
+e1.empid = 123454964
+print("{} is the empid of {}" .format(e1.empid, e1.empname))
+'''
+
+'''
+
+#Properties
+class EmployeeName:
+    def getempname(self):
+        return self.__empname
+    def setempname(self, value):
+        if not isinstance(value, str):
+            raise TypeError("'Empname' is not a string")
+        self.__empname = value
+    def delempname(self):
+        del self.__empname
+    empname = property(getempname, setempname, delempname)
+    def __init__(self,empname):
+        self.empname = empname
+    
+e1 = EmployeeName('upendra')
+name = e1.getempname()
+print(name)
+print(e1.empname)
+e1.delempname()
+print(e1.empname)
+
+'''
+
+'''
+#Properties as Decorators - not working
+class Employeename:
+    def __init__(self,empname):
+        self.empname = empname
+
+    @property
+    def empname(self):
+        return self.__empname
+
+    @empname.getter
+    def empname(self):
+        return self.__empname
+    
+    @empname.setter
+    def empname(self, name):
+        if not isinstance(name, str):
+            raise TypeError("'Empname' must be string")
+        self.__empname = name
+
+    @empname.deleter
+    def empname(self):
+        del self.__empname
+
+e1 = Employeename('upendra')
+
+print(e1.empname)
+employeenamedata = e1.empname.getter()
+print(employeenamedata)
+
+'''
+'''
+#Class Method - usefull for inheritence method(type(class),a,b)
+
+class Circle(object):
+    no_of_circles = 0
+
+    def __init__(self,radius):
+        self.__radius = radius
+        print("radicus", radius)
+        Circle.no_of_circles += 1
+        
+    @classmethod #classmethod as a decorator
+    def getCirclesCount(self):
+        return Circle.no_of_circles
+
+c1 = Circle(3.5)
+c2 = Circle(4.5)
+c3 = Circle(4.3)
+print("-------------")
+print(c1.getCirclesCount())
+print(c2.getCirclesCount())
+
+print(Circle.getCirclesCount())
+print(Circle.getCirclesCount(c3))
+'''
+
+'''
+#Static Method - method(a, b) - no need to instance
+
+from math import pi
+
+#def square(x):
+#    return x**2
+
+class Circle(object):
+    def __init__(self,radius):
+        self.__radius = radius
+
+    @staticmethod
+    def square(x):
+        return x**2
+
+    def area(self):
+        return pi*self.square(self.__radius)
+
+c1 = Circle(3.9)
+print(c1.area())
+#print(square(4))
+print(c1.square(4))
+print(Circle.square(2))
+'''
+'''
+#Abstract Base Class - No instance creation, must call all the methods
+from abc import ABC, abstractmethod
+from math import pi
+
+class Shape(ABC):
+
+    @abstractmethod
+    def area(self):
+        print("calling area")
+        pass
+
+    @abstractmethod
+    def perimeter(self):
+        print("caling perimeter")
+        pass
+
+class Circle(Shape):
+
+    def __init__(self, radius):
+        self.__radius = radius
+
+    @staticmethod
+    def square(x):
+        return x**2
+
+    def area(self):
+        return pi * self.square(self.__radius)
+
+    def perimeter(self):
+        return 2*pi*self.__radius
+    
+#s1 = Shape() # no object creation
+c1 = Circle(3.9)
+print(c1.area())
+print(c1.perimeter())
+
+'''
+
+'''
+filename = "SampleFile.txt"
+
+
+#context manager - no need to close  - Need to study more
+with open(filename,'r') as fh:
+    print(fh.read())
+    
+from contextlib import contextmanager
+
+@contextmanager
+def tag(name):
+    print("<%s>" % name)
+    yield
+    print("</%s>" % name)
+
+with tag('h1') :
+    print('Hello')
+'''
+
+'''
+
+#Coroutines
+
+def TokenIssuer():
+    tokenId = 0
+    while True:
+        name = yield
+        tokenId += 1
+        print('Token number of ', name, ':', tokenId)
+
+t = TokenIssuer()
+
+next(t)
+
+t.send('upendra')
+t.send('kanuru')
+
+
+def TokenIssuer(tokenId=0):
+    try:
+        while True:
+            name = yield
+            tokenId += 1
+            print('Token number of', name, ':', tokenId)
+    except GeneratorExit:
+        print('Last issued Token is :', tokenId)
+
+t = TokenIssuer(100)
+
+next(t)
+
+t.send('George')
+t.send('Rosy')
+t.send('Smith')
+t.close()
+
+'''
+
+'''
+# Global variables in the function.
+#local and global function to get the namespaces returns Dictionary
+Money = 2000
+def AddMoney():
+   # Uncomment the following line to fix the code:
+   global Money
+   print("local variables - start")
+   print(locals())
+   print("local variables - end")
+   Money = Money + 1
+
+print("global variables - start")
+print(globals())
+print("global variables - end")
+print(Money)
+AddMoney()
+print(Money)
+'''
+
+'''
+#lambda - returns a object to the anonymous funtion
+datasqr = (lambda x:x**2)
+print(datasqr(10))
+
+#raw_input - takes a string as input
+#input - reads a valid python expression
+
+str = input("enter your input: ")
+print("recieved input: ", str)
+'''
+
+'''
+filename = "SampleFile.txt"
+fh = open(filename,'r')
+str = fh.read(10)
+print(str)
+print("current position" , fh.tell())
+fh.seek(0,0) # seek(a,b) - b = 0 begin 1 current 2 end of file
+str = fh.read()
+print(str)
+'''
+
+'''
+#assert - exception handling - raise if not
+def Kelvin(Temp):
+    assert(Temp >=0),"colder than absolute zero"
+    return Temp*2
+
+print(Kelvin(20))
+print(Kelvin(-1))
+'''
