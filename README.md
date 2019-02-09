@@ -2,6 +2,10 @@
 
 Fresco Play
 
+Udacity 
+
+  - Data Analyst Nano Degree Course
+
 Coursera 
 
   - Introduction to Data Science with Python
