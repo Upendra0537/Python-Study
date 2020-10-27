@@ -163,11 +163,19 @@
 #y=[i*2 for i in x]
 #print(y)
 
-#generator
+#res2=[i for i in range(10) if i%2==0]
+
+#generator#saves memory #no list to be created
+#yield is used to fetch each value,next used as iterator variable
 #g=(i*2 for i in x)
 #print(next(g))
 
 # get some clarity
+
+#x = isinstance(5, int) -to check if variable is a integer
+#type(x) to find data type
+
+x = isinstance(5, int)
 
 #def showme(name, *vartuple, **vardict):
 #    '''shows details'''
